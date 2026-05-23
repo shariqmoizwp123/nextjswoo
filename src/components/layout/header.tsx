@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -11,12 +11,7 @@ import { cn } from '@/lib/utils';
 import { Search } from './search';
 
 const navigation = [
-  { name: 'New offers', href: '/shop/new-in' },
   { name: 'Products', href: '/shop' },
-  { name: 'Men', href: '/shop/men' },
-  { name: 'Women', href: '/shop/women' },
-  { name: 'Children', href: '/shop/children' },
-  { name: 'Brands', href: '/shop/brands' },
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
@@ -66,7 +61,13 @@ export function Header() {
 
           {/* Center - Logo */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 font-heading text-2xl font-bold tracking-tight">
-            MSR Lifestyle
+                           <Image
+  src="/headerlogo.jpg"
+  alt="Logo"
+  width={120}
+  height={40}
+    className="h-10 w-auto object-contain hover:scale-105 transition"
+/>
           </Link>
 
           {/* Right - Search & Cart */}

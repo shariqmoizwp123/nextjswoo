@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**dev-logstics.pantheonsite.io",
+        hostname: "dev-logstics.pantheonsite.io",
       },
     ],
 

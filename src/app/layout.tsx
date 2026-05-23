@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { Providers } from "@/components/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 // Body font - clean neutral sans-serif
 const inter = Inter({
@@ -59,6 +60,7 @@ export default function RootLayout({
           </div>
           <CartDrawer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

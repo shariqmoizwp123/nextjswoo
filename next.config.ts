@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**nextjswoo-henna.vercel.app",
+        hostname: "**dev-logstics.pantheonsite.io",
       },
     ],
 
@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
 
   experimental: {
     serverActions: {
-      bodySizeLimit: "10mb",
+      bodySizeLimit: "2mb",
     },
   },
 };

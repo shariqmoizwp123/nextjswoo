@@ -9,19 +9,33 @@ export async function POST(req) {
     const { name, email, message } = body;
 
     const data = await resend.emails.send({
-      from: "WP Ustaad <onboarding@resend.dev>",
+      from: "onboarding@resend.dev",
       to: "shariqmoiz34@gmail.com",
-      subject: "New Contact Form Message",
+      subject: "New Contact Message",
       html: `
-        <h2>New Message</h2>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Message:</b> ${message}</p>
+        <h2>New Contact Message</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+
+        <p><strong>Email:</strong> ${email}</p>
+
+        <p><strong>Message:</strong></p>
+
+        <p>${message}</p>
       `,
     });
 
-    return Response.json({ success: true, data });
+    return Response.json({
+      success: true,
+      data,
+    });
+
   } catch (error) {
-    return Response.json({ success: false, error: error.message });
+    console.log(error);
+
+    return Response.json({
+      success: false,
+      error: error.message,
+    });
   }
 }

@@ -1,5 +1,5 @@
 'use client';
-import Image from "next/image";
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -61,13 +61,7 @@ export function Header() {
 
           {/* Center - Logo */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 font-heading text-2xl font-bold tracking-tight">
-                           <Image
-  src="/headerlogo.jpg"
-  alt="Logo"
-  width={120}
-  height={40}
-    className="h-10 w-auto object-contain hover:scale-105 transition"
-/>
+            MSR Lifestyle
           </Link>
 
           {/* Right - Search & Cart */}
